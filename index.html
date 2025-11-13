@@ -2,161 +2,160 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Giorgia Pisanu · Career Day</title>
-  <meta name="description" content="CV in Italiano e English · Digital Management student @ H-FARM & Ca’ Foscari · Projects & contacts" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Giorgia Pisanu · Career Day" />
-  <meta property="og:description" content="Scarica il CV in Italiano o in English, scopri i progetti e i contatti." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pisagio.github.io/CareerDay/" />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="CV IT & EN, progetti e contatti di Giorgia Pisanu – Digital Management @ H-FARM & Ca’ Foscari." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b1220; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --brand:#2563eb; --brand-2:#7c3aed;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --bg:#f7f8fb;
+      --text:#0b1020;
+      --muted:#5a6475;
+      --pill:#e9eefc;
+      --glass:rgba(255,255,255,.7);
+      --stroke:rgba(15,23,42,.08);
+      --brand:#2563eb;      /* BLU */
+      --brand-2:#1e40af;
+      --radius:20px;
+      --shadow:0 8px 30px rgba(2,6,23,.08);
     }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f7f9fc; --card:#ffffff; --text:#111827; --muted:#475569; --brand:#2563eb; --brand-2:#7c3aed; --shadow:0 8px 24px rgba(2,6,23,.08);}
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b1020; --text:#e8eaf1; --muted:#9aa3b2; --pill:#0f172a;
+        --glass:rgba(17,24,39,.6); --stroke:rgba(148,163,184,.18);
+        --shadow:0 12px 36px rgba(0,0,0,.35);
+      }
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
-      margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
-      background:radial-gradient(1200px 800px at 10% -10%, rgba(124,58,237,.15), transparent 40%), 
-                 radial-gradient(1000px 700px at 110% 20%, rgba(37,99,235,.18), transparent 45%),
+      margin:0; font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:radial-gradient(1200px 800px at -10% -10%, rgba(37,99,235,.10), transparent 45%),
+                 radial-gradient(1200px 900px at 110% 10%, rgba(30,64,175,.10), transparent 50%),
                  var(--bg);
-      color:var(--text); display:flex; align-items:center; justify-content:center; padding:28px;
+      color:var(--text);
     }
-    .wrap{width:100%; max-width:720px}
+    .container{max-width:1080px; margin:0 auto; padding:22px 20px 60px}
+    /* top bar */
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      border:1px solid var(--stroke); border-radius:14px; padding:10px 14px; background:var(--glass); backdrop-filter:saturate(160%) blur(8px);
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .logo{
+      width:34px; height:34px; border-radius:10px; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff;
+      box-shadow:0 6px 14px rgba(37,99,235,.35);
+    }
+    .nav a.btn-mini{
+      text-decoration:none; color:#fff; background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      padding:8px 12px; border-radius:999px; font-weight:700; font-size:.9rem;
+    }
+
+    /* hero */
+    .hero{display:grid; gap:22px; margin:40px auto 26px; text-align:center}
+    .headline{
+      font-weight:800; font-size:clamp(2rem,6.2vw,4rem); line-height:1.05; margin:0;
+    }
+    .highlight{
+      background:#0f172a; color:#fff; padding:.12em .28em; border-radius:10px;
+    }
+    @media (prefers-color-scheme: light){ .highlight{ background:#111827; } }
+
+    .sub{
+      font-size:clamp(1rem,2.2vw,1.25rem); color:var(--muted); margin:0 auto; max-width:760px;
+    }
+
+    /* glass card */
     .card{
-      background:var(--card); border-radius:20px; padding:28px; box-shadow:var(--shadow); border:1px solid rgba(255,255,255,.06);
-      backdrop-filter:saturate(140%) blur(6px);
+      margin:28px auto 0; max-width:900px;
+      background:var(--glass); border:1px solid var(--stroke); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:22px;
+      backdrop-filter:saturate(160%) blur(8px);
     }
-    header{display:flex; gap:16px; align-items:center; margin-bottom:10px}
-    .avatar{
-      width:60px; height:60px; border-radius:14px;
-      background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      display:grid; place-items:center; color:white; font-weight:800; letter-spacing:1px;
-      box-shadow:0 8px 20px rgba(37,99,235,.35);
-      user-select:none;
-    }
-    h1{font-size:1.35rem; margin:0}
-    .sub{color:var(--muted); margin:4px 0 0; font-size:.98rem}
-    .cta{
-      display:grid; grid-template-columns:1fr; gap:12px; margin:18px 0 6px;
-    }
-    @media (min-width:580px){ .cta{ grid-template-columns:1fr 1fr; } }
+
+    /* CTAs */
+    .cta{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 6px}
     .btn{
-      display:flex; align-items:center; justify-content:center; gap:10px;
-      padding:14px 16px; border-radius:12px; text-decoration:none; font-weight:700; letter-spacing:.2px;
+      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+      padding:14px 18px; border-radius:14px; font-weight:700; letter-spacing:.2px;
       color:#fff; background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      box-shadow:0 10px 24px rgba(37,99,235,.35); transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
+      box-shadow:0 12px 26px rgba(37,99,235,.35); transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
     }
-    .btn:hover{ transform:translateY(-2px); filter:saturate(1.05); box-shadow:0 14px 28px rgba(37,99,235,.45); }
-    .btn.secondary{
-      background:#0ea5e9; box-shadow:0 8px 20px rgba(14,165,233,.35);
-    }
+    .btn:hover{ transform:translateY(-2px); filter:saturate(1.06); box-shadow:0 16px 34px rgba(37,99,235,.45); }
     .btn.ghost{
-      color:var(--text); background:transparent; border:1px solid rgba(148,163,184,.35);
+      color:var(--text); background:transparent; border:2px solid var(--text);
       box-shadow:none;
     }
-    .meta{display:flex; gap:10px; align-items:center; justify-content:center; margin-top:4px; color:var(--muted); font-size:.9rem}
-    .list{
-      margin-top:12px; display:grid; grid-template-columns:1fr; gap:10px;
+    .pill{display:inline-block; padding:6px 10px; background:var(--pill); border-radius:999px; color:var(--brand); font-weight:700; font-size:.92rem}
+
+    /* bio row */
+    .row{display:grid; gap:22px; grid-template-columns:1fr; align-items:center; margin-top:24px}
+    @media (min-width:860px){ .row{ grid-template-columns:280px 1fr; } }
+    .avatar{
+      width:100%; max-width:260px; height:260px; border-radius:22px;
+      background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      display:grid; place-items:center; color:#fff; font-weight:800; font-size:2.2rem;
+      box-shadow:0 10px 28px rgba(37,99,235,.35); margin:0 auto;
     }
-    @media (min-width:580px){ .list{ grid-template-columns:1fr 1fr; } }
-    .pill{
-      display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:12px;
-      border:1px solid rgba(148,163,184,.28); color:var(--text); text-decoration:none; background:transparent;
-      transition:transform .15s, border-color .2s, background .2s;
+    .bio p{margin:.2rem 0; color:var(--muted); font-size:1.05rem}
+    .links{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px}
+    .chip{
+      text-decoration:none; color:var(--text); border:1px solid var(--stroke); padding:10px 12px; border-radius:12px;
+      transition:transform .15s ease, background .2s ease; background:transparent;
     }
-    .pill:hover{ transform:translateY(-2px); border-color:rgba(148,163,184,.5); background:rgba(148,163,184,.08); }
-    footer{margin-top:18px; color:var(--muted); font-size:.88rem; text-align:center}
-    .lang-hint{font-size:.85rem; color:var(--muted); margin-top:6px}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; background:rgba(148,163,184,.18); padding:2px 6px; border-radius:6px}
-    /* reduce motion */
-    @media (prefers-reduced-motion: reduce){
-      .btn,.pill{ transition:none }
-    }
-    /* focus states */
+    .chip:hover{ transform:translateY(-2px); background:rgba(148,163,184,.12) }
+
+    footer{margin:36px 0 6px; text-align:center; color:var(--muted); font-size:.95rem}
     a:focus-visible{ outline:3px solid #22d3ee; outline-offset:2px; border-radius:10px }
-    /* tiny helper for file sizes */
-    .size{opacity:.9; font-weight:600; font-size:.85rem; padding:.2rem .5rem; background:rgba(2,6,23,.18); border-radius:999px}
-    @media (prefers-color-scheme: light){ .size{ background:rgba(2,6,23,.06);} }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card" role="region" aria-labelledby="title">
-      <header>
-        <div class="avatar" aria-hidden="true">GP</div>
-        <div>
-          <h1 id="title">Giorgia Pisanu</h1>
-          <p class="sub">Digital Management student @ H-FARM College & Ca’ Foscari · Creative × Analytical × Versatile</p>
+  <div class="container">
+    <!-- NAV -->
+    <div class="nav" role="navigation" aria-label="Top Bar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">GP</div>
+        <span>Giorgia&nbsp;Pisanu</span>
+      </div>
+      <a class="btn-mini" href="https://www.linkedin.com/in/giorgia-pisanu" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="headline">
+        <span class="highlight">Curriculum</span> pronti<br/>in pochi secondi
+      </h1>
+      <p class="sub">Scarica il mio CV in Italiano o in English, e scopri i progetti: tutto in un’unica pagina, ottimizzata per NFC/QR al Career Day.</p>
+
+      <div class="card">
+        <div class="cta" aria-label="Download CV">
+          <a class="btn" href="./Giorgia_Pisanu_CV_IT.pdf" target="_blank" rel="noopener">🇮🇹 Scarica CV Italiano</a>
+          <a class="btn ghost" href="./Giorgia_Pisanu_CV_EN.pdf" target="_blank" rel="noopener">🇬🇧 View CV in English</a>
         </div>
-      </header>
-
-      <!-- Primary CTAs -->
-      <div class="cta" aria-label="Download CV">
-        <a class="btn" href="./Giorgia_Pisanu_CV_IT.pdf" target="_blank" rel="noopener">
-          🇮🇹 CV in Italiano <span class="size" id="size-it">PDF</span>
-        </a>
-        <a class="btn" href="./Giorgia_Pisanu_CV_EN.pdf" target="_blank" rel="noopener">
-          🇬🇧 CV in English <span class="size" id="size-en">PDF</span>
-        </a>
+        <p style="text-align:center;margin:6px 0 0;">
+          <span class="pill">Digital Management @ H-FARM & Ca’ Foscari</span>
+        </p>
       </div>
-
-      <p class="lang-hint">Suggerimento: il sito prova a mostrarti prima il CV nella tua lingua di sistema.</p>
-
-      <!-- Secondary links -->
-      <div class="list" aria-label="Links">
-        <a class="pill" href="https://www.linkedin.com/in/giorgia-pisanu" target="_blank" rel="noopener" aria-label="LinkedIn">
-          🔗 LinkedIn · Connect
-        </a>
-        <a class="pill" href="https://pisagio.github.io/Coding_Project/" target="_blank" rel="noopener" aria-label="NBA Data Analysis Project">
-          💻 NBA Data Analysis · Live
-        </a>
-      </div>
-
-      <footer>
-        © 2025 Giorgia Pisanu · NFC/QR ready · <span class="kbd">tap</span> or <span class="kbd">scan</span>
-      </footer>
     </section>
 
-    <div class="meta" id="pref"></div>
-  </main>
+    <!-- BIO + LINKS -->
+    <section class="row">
+      <div class="avatar" aria-hidden="true">GP</div>
+      <div class="bio">
+        <h2 style="margin:0 0 .2rem 0">Hi, I'm <span style="color:var(--brand)">Giorgia</span></h2>
+        <p>Creativa, analitica e versatile. Cresciuta tra tre paesi, appassionata di lingue, viaggi e tecnologia.</p>
+        <p>Amo progetti dove innovazione e creatività si incontrano per generare impatto reale.</p>
+        <div class="links" aria-label="Secondary links">
+          <a class="chip" href="https://pisagio.github.io/Coding_Project/" target="_blank" rel="noopener">💻 NBA Data Analysis — Live</a>
+          <a class="chip" href="mailto:giorgia.pisanu2005@gmail.com">✉️ Contattami</a>
+          <a class="chip" href="https://www.linkedin.com/in/giorgia-pisanu" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    // 1) evidenzia il CV nella lingua del browser
-    (function(){
-      const lang = (navigator.language || 'en').toLowerCase();
-      const it = document.querySelector('a[href$="_CV_IT.pdf"]');
-      const en = document.querySelector('a[href$="_CV_EN.pdf"]');
-      const pref = document.getElementById('pref');
-      if(lang.startsWith('it')){
-        it.style.filter = 'saturate(1.1)'; it.style.transform='translateY(-1px)';
-        pref.textContent = 'Preferenza lingua rilevata: Italiano';
-      } else {
-        en.style.filter = 'saturate(1.1)'; en.style.transform='translateY(-1px)';
-        pref.textContent = 'Detected language preference: English';
-      }
-    })();
-
-    // 2) prova a mostrare dimensione file (se consentito dal server)
-    async function setSize(selector, path){
-      try{
-        const r = await fetch(path, { method:'HEAD' });
-        const len = r.headers.get('content-length');
-        if(len){
-          const mb = (Number(len)/1048576).toFixed(2);
-          document.querySelector(selector).textContent = mb+' MB';
-        }
-      }catch(_){}
-    }
-    setSize('#size-it','./Giorgia_Pisanu_CV_IT.pdf');
-    setSize('#size-en','./Giorgia_Pisanu_CV_EN.pdf');
-  </script>
+    <footer>© 2025 Giorgia Pisanu — Made for Career Day · Auto dark/light · Accessibile</footer>
+  </div>
 </body>
 </html>
+
 
