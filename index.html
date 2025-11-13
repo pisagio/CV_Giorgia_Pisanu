@@ -29,17 +29,20 @@
       color: var(--text);
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 60px 20px;
+      min-height: 100vh;
+      padding: 40px 20px;
+      text-align: center;
     }
 
     header {
-      width: 100%;
-      max-width: 900px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 80px;
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 60px;
     }
 
     .logo {
@@ -77,14 +80,19 @@
     }
 
     main {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      gap: 40px;
+      width: 100%;
       max-width: 760px;
     }
 
     h1 {
       font-size: clamp(2rem, 6vw, 3.5rem);
       font-weight: 700;
-      margin-bottom: 20px;
       line-height: 1.1;
     }
 
@@ -95,25 +103,17 @@
       border-radius: 8px;
     }
 
-    p.subtitle {
-      color: var(--muted);
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-      line-height: 1.5;
-    }
-
     .buttons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 70px;
+      gap: 16px;
     }
 
     .btn {
       text-decoration: none;
       font-weight: 600;
-      padding: 14px 22px;
+      padding: 14px 24px;
       border-radius: var(--radius);
       border: 2px solid var(--brand);
       color: var(--brand);
@@ -133,69 +133,8 @@
       transform: translateY(-1px);
     }
 
-    .about {
-      display: grid;
-      gap: 24px;
-      align-items: center;
-      text-align: left;
-      margin-top: 30px;
-    }
-
-    @media (min-width: 800px) {
-      .about {
-        grid-template-columns: 240px 1fr;
-      }
-    }
-
-    .avatar {
-      width: 240px;
-      height: 240px;
-      border-radius: 20px;
-      background: var(--brand);
-      display: grid;
-      place-items: center;
-      font-size: 2rem;
-      font-weight: 700;
-      color: white;
-      margin: 0 auto;
-    }
-
-    .about-text h2 {
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .about-text p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .link-chip {
-      text-decoration: none;
-      color: var(--text);
-      border: 1.5px solid #e5e7eb;
-      border-radius: var(--radius);
-      padding: 10px 14px;
-      font-weight: 500;
-      transition: background 0.2s ease;
-    }
-
-    .link-chip:hover {
-      background: #f1f5f9;
-    }
-
     footer {
-      margin-top: 60px;
+      margin-top: 80px;
       color: var(--muted);
       font-size: 0.9rem;
       text-align: center;
@@ -224,6 +163,7 @@
   </main>
 </body>
 </html>
+
 
 
 
