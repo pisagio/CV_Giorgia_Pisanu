@@ -2,159 +2,245 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Giorgia Pisanu · Career Day</title>
-  <meta name="description" content="CV IT & EN, progetti e contatti di Giorgia Pisanu – Digital Management @ H-FARM & Ca’ Foscari." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="CV in Italiano e in English di Giorgia Pisanu – Digital Management @ H-FARM & Ca’ Foscari." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#f7f8fb;
-      --text:#0b1020;
-      --muted:#5a6475;
-      --pill:#e9eefc;
-      --glass:rgba(255,255,255,.7);
-      --stroke:rgba(15,23,42,.08);
-      --brand:#2563eb;      /* BLU */
-      --brand-2:#1e40af;
-      --radius:20px;
-      --shadow:0 8px 30px rgba(2,6,23,.08);
+    :root {
+      --bg: #ffffff;
+      --text: #0b0f19;
+      --muted: #555;
+      --brand: #2563eb;
+      --brand-hover: #1d4ed8;
+      --radius: 14px;
     }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#0b1020; --text:#e8eaf1; --muted:#9aa3b2; --pill:#0f172a;
-        --glass:rgba(17,24,39,.6); --stroke:rgba(148,163,184,.18);
-        --shadow:0 12px 36px rgba(0,0,0,.35);
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    header {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      gap: 10px;
+    }
+
+    .logo-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--brand);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #fff;
+      background: var(--brand);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--brand-hover);
+    }
+
+    main {
+      text-align: center;
+      max-width: 760px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    h1 span {
+      background: var(--brand);
+      color: white;
+      padding: 0.15em 0.3em;
+      border-radius: 8px;
+    }
+
+    p.subtitle {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 70px;
+    }
+
+    .btn {
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 22px;
+      border-radius: var(--radius);
+      border: 2px solid var(--brand);
+      color: var(--brand);
+      transition: all 0.2s ease;
+    }
+
+    .btn.primary {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: var(--brand-hover);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .about {
+      display: grid;
+      gap: 24px;
+      align-items: center;
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    @media (min-width: 800px) {
+      .about {
+        grid-template-columns: 240px 1fr;
       }
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      background:radial-gradient(1200px 800px at -10% -10%, rgba(37,99,235,.10), transparent 45%),
-                 radial-gradient(1200px 900px at 110% 10%, rgba(30,64,175,.10), transparent 50%),
-                 var(--bg);
-      color:var(--text);
-    }
-    .container{max-width:1080px; margin:0 auto; padding:22px 20px 60px}
-    /* top bar */
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      border:1px solid var(--stroke); border-radius:14px; padding:10px 14px; background:var(--glass); backdrop-filter:saturate(160%) blur(8px);
-    }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
-    .logo{
-      width:34px; height:34px; border-radius:10px; display:grid; place-items:center;
-      background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff;
-      box-shadow:0 6px 14px rgba(37,99,235,.35);
-    }
-    .nav a.btn-mini{
-      text-decoration:none; color:#fff; background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      padding:8px 12px; border-radius:999px; font-weight:700; font-size:.9rem;
+
+    .avatar {
+      width: 240px;
+      height: 240px;
+      border-radius: 20px;
+      background: var(--brand);
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 auto;
     }
 
-    /* hero */
-    .hero{display:grid; gap:22px; margin:40px auto 26px; text-align:center}
-    .headline{
-      font-weight:800; font-size:clamp(2rem,6.2vw,4rem); line-height:1.05; margin:0;
-    }
-    .highlight{
-      background:#0f172a; color:#fff; padding:.12em .28em; border-radius:10px;
-    }
-    @media (prefers-color-scheme: light){ .highlight{ background:#111827; } }
-
-    .sub{
-      font-size:clamp(1rem,2.2vw,1.25rem); color:var(--muted); margin:0 auto; max-width:760px;
+    .about-text h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    /* glass card */
-    .card{
-      margin:28px auto 0; max-width:900px;
-      background:var(--glass); border:1px solid var(--stroke); border-radius:var(--radius);
-      box-shadow:var(--shadow); padding:22px;
-      backdrop-filter:saturate(160%) blur(8px);
+    .about-text p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
     }
 
-    /* CTAs */
-    .cta{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:18px 0 6px}
-    .btn{
-      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
-      padding:14px 18px; border-radius:14px; font-weight:700; letter-spacing:.2px;
-      color:#fff; background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      box-shadow:0 12px 26px rgba(37,99,235,.35); transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
     }
-    .btn:hover{ transform:translateY(-2px); filter:saturate(1.06); box-shadow:0 16px 34px rgba(37,99,235,.45); }
-    .btn.ghost{
-      color:var(--text); background:transparent; border:2px solid var(--text);
-      box-shadow:none;
-    }
-    .pill{display:inline-block; padding:6px 10px; background:var(--pill); border-radius:999px; color:var(--brand); font-weight:700; font-size:.92rem}
 
-    /* bio row */
-    .row{display:grid; gap:22px; grid-template-columns:1fr; align-items:center; margin-top:24px}
-    @media (min-width:860px){ .row{ grid-template-columns:280px 1fr; } }
-    .avatar{
-      width:100%; max-width:260px; height:260px; border-radius:22px;
-      background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      display:grid; place-items:center; color:#fff; font-weight:800; font-size:2.2rem;
-      box-shadow:0 10px 28px rgba(37,99,235,.35); margin:0 auto;
+    .link-chip {
+      text-decoration: none;
+      color: var(--text);
+      border: 1.5px solid #e5e7eb;
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      font-weight: 500;
+      transition: background 0.2s ease;
     }
-    .bio p{margin:.2rem 0; color:var(--muted); font-size:1.05rem}
-    .links{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px}
-    .chip{
-      text-decoration:none; color:var(--text); border:1px solid var(--stroke); padding:10px 12px; border-radius:12px;
-      transition:transform .15s ease, background .2s ease; background:transparent;
-    }
-    .chip:hover{ transform:translateY(-2px); background:rgba(148,163,184,.12) }
 
-    footer{margin:36px 0 6px; text-align:center; color:var(--muted); font-size:.95rem}
-    a:focus-visible{ outline:3px solid #22d3ee; outline-offset:2px; border-radius:10px }
+    .link-chip:hover {
+      background: #f1f5f9;
+    }
+
+    footer {
+      margin-top: 60px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <!-- NAV -->
-    <div class="nav" role="navigation" aria-label="Top Bar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">GP</div>
-        <span>Giorgia&nbsp;Pisanu</span>
-      </div>
-      <a class="btn-mini" href="https://www.linkedin.com/in/giorgia-pisanu" target="_blank" rel="noopener">LinkedIn</a>
+  <header>
+    <div class="logo">
+      <div class="logo-circle">GP</div>
+      Giorgia Pisanu
+    </div>
+    <a class="nav-link" href="https://www.linkedin.com/in/giorgia-pisanu" target="_blank">LinkedIn</a>
+  </header>
+
+  <main>
+    <h1><span>Curriculum</span> in pochi secondi</h1>
+    <p class="subtitle">
+      Scarica il mio CV in Italiano o in English, e scopri i miei progetti nel campo della tecnologia e dell’innovazione.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="./Giorgia_Pisanu_CV_IT.pdf" target="_blank">🇮🇹 CV Italiano</a>
+      <a class="btn" href="./Giorgia_Pisanu_CV_EN.pdf" target="_blank">🇬🇧 CV English</a>
     </div>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h1 class="headline">
-        <span class="highlight">Giorgia</span> Pisanu<br/>
-      </h1>
-      
-      <div class="card">
-        <div class="cta" aria-label="Download CV">
-          <a class="btn" href="./Giorgia_Pisanu_CV_IT.pdf" target="_blank" rel="noopener">🇮🇹 CV Italiano</a>
-          <a class="btn ghost" href="./Giorgia_Pisanu_CV_EN.pdf" target="_blank" rel="noopener">🇬🇧 CV in English</a>
-        </div>
-        <p style="text-align:center;margin:6px 0 0;">
-          <span class="pill">Digital Management @ H-FARM & Ca’ Foscari</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- BIO + LINKS -->
-    <section class="row">
-      <div class="avatar" aria-hidden="true">GP</div>
-      <div class="bio">
-        <h2 style="margin:0 0 .2rem 0">Hi, I'm <span style="color:var(--brand)">Giorgia</span></h2>
-        <p>Creativa, analitica e versatile. Cresciuta tra tre paesi, appassionata di lingue, viaggi e tecnologia.</p>
-        <p>Amo progetti dove innovazione e creatività si incontrano per generare impatto reale.</p>
-        <div class="links" aria-label="Secondary links">
-          <a class="chip" href="https://pisagio.github.io/Coding_Project/" target="_blank" rel="noopener">💻 NBA Data Analysis — Live</a>
-          <a class="chip" href="mailto:giorgia.pisanu2005@gmail.com">✉️ Contattami</a>
-          <a class="chip" href="https://www.linkedin.com/in/giorgia-pisanu" target="_blank" rel="noopener">🔗 LinkedIn</a>
+    <section class="about">
+      <div class="avatar">GP</div>
+      <div class="about-text">
+        <h2>Hi, I'm Giorgia 👋</h2>
+        <p>Creativa, analitica e versatile. Cresciuta tra tre paesi, ho sviluppato una curiosità autentica per il mondo, le culture e le persone.</p>
+        <p>Amo le lingue, la tecnologia e i progetti che uniscono innovazione e creatività per generare impatto reale.</p>
+        <div class="links">
+          <a class="link-chip" href="https://pisagio.github.io/Coding_Project/" target="_blank">💻 NBA Data Analysis</a>
+          <a class="link-chip" href="mailto:giorgia.pisanu2005@gmail.com">✉️ Email</a>
+          <a class="link-chip" href="https://www.linkedin.com/in/giorgia-pisanu" target="_blank">🔗 LinkedIn</a>
         </div>
       </div>
     </section>
 
-    <footer>© 2025 Giorgia Pisanu — Made for Career Day</footer>
-  </div>
+    <footer>© 2025 Giorgia Pisanu · Made for Career Day</footer>
+  </main>
 </body>
 </html>
+
 
 
