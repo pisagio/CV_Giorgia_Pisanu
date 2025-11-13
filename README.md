@@ -3,7 +3,7 @@
 This repository hosts my personal CVs for the H-FARM Career Day.
 
 ## 🌐 Live Page
-👉 [https://pisagio.github.io/CareerDay/](https://pisagio.github.io/CareerDay/)
+👉 [https://github.com/pisagio/CV_Giorgia_Pisanu.git](https://pisagio.github.io/CareerDay/)
 
 ## 📄 Files
 - **CV Career Day ITA.pdf** — Curriculum Vitae in Italian 🇮🇹  
